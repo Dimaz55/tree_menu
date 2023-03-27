@@ -1,0 +1,8 @@
+{% if menu_name %}
+    <div class="menu">
+    <a href="/"><b>{{ menu_name }}</b></a>
+<ul>
+    {% include 'recurse.html' with menu_items=menu_items item=item %}
+</ul>
+    </div>
+{% endif %}

@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  tree_menu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tree_menu
+    restart: on-failure
+    command: sh -c "python manage.py runserver 0.0.0.0:8000 -v 3"
+    volumes:
+      - ".:/app/tree_menu/"
+    ports:
+      - "8000:8000"

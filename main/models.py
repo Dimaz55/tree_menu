@@ -24,7 +24,6 @@ class Item(models.Model):
 	)
 	level = models.IntegerField(default=0, editable=False)
 	root = models.IntegerField(null=True, editable=False)
-	has_children = models.BooleanField(default=False)
 
 	def __str__(self):
 		return f'{self.title} ({self.menu.name})'
